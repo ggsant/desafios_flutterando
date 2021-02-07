@@ -16,17 +16,16 @@ class SystemButtonGroup extends StatelessWidget {
         Description(
           text: 'pause',
           child: Button(
-              size: _SYSTEM_BUTTON_SIZE,
-              color: _systemButtonColor,
-              enableLongPress: false,
-              onTap: () {
-                Game.of(context).pauseOrResume();
-              }),
+            color: _systemButtonColor,
+            enableLongPress: false,
+            onTap: () {
+              Game.of(context).pauseOrResume();
+            },
+          ),
         ),
         Description(
           text: 'reset',
           child: Button(
-              size: _SYSTEM_BUTTON_SIZE,
               enableLongPress: false,
               color: Colors.red,
               onTap: () {

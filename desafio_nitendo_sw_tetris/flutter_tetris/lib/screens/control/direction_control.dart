@@ -82,30 +82,24 @@ class DirectionController extends StatelessWidget {
                 children: <Widget>[
                   Button(
                       enableLongPress: false,
-                      size: _DIRECTION_BUTTON_SIZE,
                       onTap: () {
                         Game.of(context).rotate();
                       }),
                   SizedBox(width: _DIRECTION_SPACE),
-                  Button(
-                      size: _DIRECTION_BUTTON_SIZE,
-                      onTap: () {
-                        Game.of(context).right();
-                      }),
+                  Button(onTap: () {
+                    Game.of(context).right();
+                  }),
                 ],
               ),
               SizedBox(height: _DIRECTION_SPACE),
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Button(
-                      size: _DIRECTION_BUTTON_SIZE,
-                      onTap: () {
-                        Game.of(context).left();
-                      }),
+                  Button(onTap: () {
+                    Game.of(context).left();
+                  }),
                   SizedBox(width: _DIRECTION_SPACE),
                   Button(
-                    size: _DIRECTION_BUTTON_SIZE,
                     onTap: () {
                       Game.of(context).down();
                     },

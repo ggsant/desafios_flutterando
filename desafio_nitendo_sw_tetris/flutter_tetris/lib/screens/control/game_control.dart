@@ -7,7 +7,7 @@ class GameController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 300,
       child: Row(
         children: <Widget>[
           Expanded(child: LeftController()),

@@ -17,9 +17,8 @@ class PagePortrait extends StatelessWidget {
           padding: MediaQuery.of(context).padding,
           child: Column(
             children: <Widget>[
-              Spacer(),
               _ScreenDecoration(child: MainScreen(width: screenW)),
-              Spacer(flex: 2),
+              Spacer(),
               GameController(),
             ],
           ),

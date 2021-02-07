@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:tetris/resource/colors.dart';
 
 class Button extends StatefulWidget {
-  final Size size;
   final Widget icon;
 
   final VoidCallback onTap;
@@ -12,14 +12,13 @@ class Button extends StatefulWidget {
 
   final bool enableLongPress;
 
-  const Button(
-      {Key key,
-      @required this.size,
-      @required this.onTap,
-      this.icon,
-      this.color = Colors.blue,
-      this.enableLongPress = true})
-      : super(key: key);
+  const Button({
+    Key key,
+    @required this.onTap,
+    this.icon,
+    this.color = AppColors.bigButtonLayerBorder,
+    this.enableLongPress = true,
+  }) : super(key: key);
 
   @override
   _ButtonState createState() {
@@ -48,11 +47,7 @@ class _ButtonState extends State<Button> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: _color,
-      elevation: 2,
-      shape: CircleBorder(),
-      child: GestureDetector(
+    return GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTapDown: (_) async {
           setState(() {
@@ -95,10 +90,56 @@ class _ButtonState extends State<Button> {
             _color = widget.color;
           });
         },
-        child: SizedBox.fromSize(
-          size: widget.size,
-        ),
-      ),
-    );
+        child: Container(
+          height: 50,
+          width: 50,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            border: Border.all(color: _color),
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                AppColors.bigButtonLayer0Top,
+                AppColors.bigButtonLayer0Bottom
+              ],
+            ),
+          ),
+          child: Container(
+            height: 45,
+            width: 45,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [
+                  AppColors.bigButtonLayer1Top,
+                  AppColors.bigButtonLayer1Botto,
+                ],
+              ),
+            ),
+            child: Container(
+              height: 60,
+              width: 60,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                border:
+                    Border.all(color: AppColors.bigButtonLayerBorder, width: 1),
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    AppColors.bigButtonLayer2Top,
+                    AppColors.bigButtonLayer2Botto,
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ));
   }
 }

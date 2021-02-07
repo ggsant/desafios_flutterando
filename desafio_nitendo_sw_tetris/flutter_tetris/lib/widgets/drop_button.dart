@@ -11,7 +11,6 @@ class DropButton extends StatelessWidget {
       text: 'drop',
       child: Button(
           enableLongPress: false,
-          size: Size(90, 90),
           onTap: () {
             Game.of(context).drop();
           }),
