@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tetris/gamer/block.dart';
 import 'package:tetris/gamer/gamer.dart';
-import 'package:tetris/generated/i18n.dart';
 import 'package:tetris/material/briks.dart';
 import 'package:tetris/material/images.dart';
 
@@ -15,23 +14,19 @@ class StatusPanel extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(S.of(context).points,
-              style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('points', style: TextStyle(fontWeight: FontWeight.bold)),
           SizedBox(height: 4),
           Number(number: GameState.of(context).points),
           SizedBox(height: 10),
-          Text(S.of(context).cleans,
-              style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('cleans', style: TextStyle(fontWeight: FontWeight.bold)),
           SizedBox(height: 4),
           Number(number: GameState.of(context).cleared),
           SizedBox(height: 10),
-          Text(S.of(context).level,
-              style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('level', style: TextStyle(fontWeight: FontWeight.bold)),
           SizedBox(height: 4),
           Number(number: GameState.of(context).level),
           SizedBox(height: 10),
-          Text(S.of(context).next,
-              style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('next', style: TextStyle(fontWeight: FontWeight.bold)),
           SizedBox(height: 4),
           _NextBlock(),
           Spacer(),

@@ -3,7 +3,6 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:tetris/gamer/gamer.dart';
-import 'package:tetris/generated/i18n.dart';
 
 class GameController extends StatelessWidget {
   @override
@@ -148,7 +147,7 @@ class SystemButtonGroup extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         _Description(
-          text: S.of(context).sounds,
+          text: 'sounds',
           child: _Button(
               size: _SYSTEM_BUTTON_SIZE,
               color: _systemButtonColor,
@@ -158,7 +157,7 @@ class SystemButtonGroup extends StatelessWidget {
               }),
         ),
         _Description(
-          text: S.of(context).pause_resume,
+          text: 'pause',
           child: _Button(
               size: _SYSTEM_BUTTON_SIZE,
               color: _systemButtonColor,
@@ -168,7 +167,7 @@ class SystemButtonGroup extends StatelessWidget {
               }),
         ),
         _Description(
-          text: S.of(context).reset,
+          text: 'reset',
           child: _Button(
               size: _SYSTEM_BUTTON_SIZE,
               enableLongPress: false,
