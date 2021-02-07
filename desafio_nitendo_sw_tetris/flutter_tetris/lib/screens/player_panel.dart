@@ -9,9 +9,7 @@ Size getBrikSizeForScreenWidth(double width) {
   return Size.square((width - _PLAYER_PANEL_PADDING) / GAME_PAD_MATRIX_W);
 }
 
-///the matrix of player content
 class PlayerPanel extends StatelessWidget {
-  //the size of player panel
   final Size size;
 
   PlayerPanel({Key key, @required double width})
@@ -49,7 +47,9 @@ class _PlayerPad extends StatelessWidget {
           children: list.map((b) {
             return b == 1
                 ? const Brik.normal()
-                : b == 2 ? const Brik.highlight() : const Brik.empty();
+                : b == 2
+                    ? const Brik.highlight()
+                    : const Brik.empty();
           }).toList(),
         );
       }).toList(),
