@@ -19,7 +19,7 @@ class PagePortrait extends StatelessWidget {
             children: <Widget>[
               _ScreenDecoration(child: MainScreen(width: screenW)),
               Spacer(),
-              GameController(),
+              GameControl(),
             ],
           ),
         ),

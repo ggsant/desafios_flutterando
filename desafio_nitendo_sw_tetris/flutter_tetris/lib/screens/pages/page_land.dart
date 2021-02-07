@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tetris/screens/control/direction_control.dart';
 import 'package:tetris/screens/control/system_button_group.dart';
-import 'package:tetris/widgets/drop_button.dart';
 
 import '../home_page.dart';
 import '../main_screen.dart';
@@ -27,10 +26,10 @@ class PageLand extends StatelessWidget {
                     Spacer(),
                     SystemButtonGroup(),
                     Spacer(),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 40, bottom: 40),
-                      child: DropButton(),
-                    )
+                    // Padding(
+                    //   padding: const EdgeInsets.only(left: 40, bottom: 40),
+                    //   child: DropButton(),
+                    // )
                   ],
                 ),
               ),
@@ -39,7 +38,7 @@ class PageLand extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Spacer(),
-                    DirectionController(),
+                    DirectionControl(),
                     SizedBox(height: 30),
                   ],
                 ),

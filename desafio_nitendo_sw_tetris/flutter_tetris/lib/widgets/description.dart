@@ -45,7 +45,11 @@ class Description extends StatelessWidget {
     }
     return DefaultTextStyle(
       child: widget,
-      style: TextStyle(fontSize: 12, color: Colors.white),
+      style: TextStyle(
+        fontSize: 12,
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 }

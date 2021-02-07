@@ -10,7 +10,7 @@ const double _DIRECTION_SPACE = 16;
 
 const double _iconSize = 16;
 
-class DirectionController extends StatelessWidget {
+class DirectionControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -18,10 +18,11 @@ class DirectionController extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(top: 12, bottom: 15),
         decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(60),
-            )),
+          color: Colors.red,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(60),
+          ),
+        ),
         height: 350,
         width: 150,
         child: Stack(
@@ -39,20 +40,22 @@ class DirectionController extends StatelessWidget {
                       Transform.scale(
                         scale: 1.5,
                         child: Transform.rotate(
-                            angle: -math.pi / 4,
-                            child: Icon(
-                              Icons.arrow_drop_up,
-                              size: _iconSize,
-                            )),
+                          angle: -math.pi / 4,
+                          child: Icon(
+                            Icons.arrow_drop_up,
+                            size: _iconSize,
+                          ),
+                        ),
                       ),
                       Transform.scale(
                         scale: 1.5,
                         child: Transform.rotate(
-                            angle: -math.pi / 4,
-                            child: Icon(
-                              Icons.arrow_right,
-                              size: _iconSize,
-                            )),
+                          angle: -math.pi / 4,
+                          child: Icon(
+                            Icons.arrow_right,
+                            size: _iconSize,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -62,20 +65,22 @@ class DirectionController extends StatelessWidget {
                       Transform.scale(
                         scale: 1.5,
                         child: Transform.rotate(
-                            angle: -math.pi / 4,
-                            child: Icon(
-                              Icons.arrow_left,
-                              size: _iconSize,
-                            )),
+                          angle: -math.pi / 4,
+                          child: Icon(
+                            Icons.arrow_left,
+                            size: _iconSize,
+                          ),
+                        ),
                       ),
                       Transform.scale(
                         scale: 1.5,
                         child: Transform.rotate(
-                            angle: -math.pi / 4,
-                            child: Icon(
-                              Icons.arrow_drop_down,
-                              size: _iconSize,
-                            )),
+                          angle: -math.pi / 4,
+                          child: Icon(
+                            Icons.arrow_drop_down,
+                            size: _iconSize,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -91,26 +96,31 @@ class DirectionController extends StatelessWidget {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Button(
-                          enableLongPress: false,
-                          onTap: () {
-                            Game.of(context).rotate();
-                          }),
+                      ButtonDirections(
+                        enableLongPress: false,
+                        onTap: () {
+                          Game.of(context).rotate();
+                        },
+                      ),
                       SizedBox(width: _DIRECTION_SPACE),
-                      Button(onTap: () {
-                        Game.of(context).right();
-                      }),
+                      ButtonDirections(
+                        onTap: () {
+                          Game.of(context).right();
+                        },
+                      ),
                     ],
                   ),
                   SizedBox(height: _DIRECTION_SPACE),
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Button(onTap: () {
-                        Game.of(context).left();
-                      }),
+                      ButtonDirections(
+                        onTap: () {
+                          Game.of(context).left();
+                        },
+                      ),
                       SizedBox(width: _DIRECTION_SPACE),
-                      Button(
+                      ButtonDirections(
                         onTap: () {
                           Game.of(context).down();
                         },
@@ -126,105 +136,4 @@ class DirectionController extends StatelessWidget {
       ),
     );
   }
-
-// Stack(
-//       alignment: Alignment.center,
-//       children: <Widget>[
-//         SizedBox.fromSize(size: _DIRECTION_BUTTON_SIZE * 2.8),
-//         Transform.rotate(
-//           angle: math.pi / 4,
-//           child: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: <Widget>[
-//               Row(
-//                 mainAxisSize: MainAxisSize.min,
-//                 children: <Widget>[
-//                   Transform.scale(
-//                     scale: 1.5,
-//                     child: Transform.rotate(
-//                         angle: -math.pi / 4,
-//                         child: Icon(
-//                           Icons.arrow_drop_up,
-//                           size: _iconSize,
-//                         )),
-//                   ),
-//                   Transform.scale(
-//                     scale: 1.5,
-//                     child: Transform.rotate(
-//                         angle: -math.pi / 4,
-//                         child: Icon(
-//                           Icons.arrow_right,
-//                           size: _iconSize,
-//                         )),
-//                   ),
-//                 ],
-//               ),
-//               Row(
-//                 mainAxisSize: MainAxisSize.min,
-//                 children: <Widget>[
-//                   Transform.scale(
-//                     scale: 1.5,
-//                     child: Transform.rotate(
-//                         angle: -math.pi / 4,
-//                         child: Icon(
-//                           Icons.arrow_left,
-//                           size: _iconSize,
-//                         )),
-//                   ),
-//                   Transform.scale(
-//                     scale: 1.5,
-//                     child: Transform.rotate(
-//                         angle: -math.pi / 4,
-//                         child: Icon(
-//                           Icons.arrow_drop_down,
-//                           size: _iconSize,
-//                         )),
-//                   ),
-//                 ],
-//               ),
-//             ],
-//           ),
-//         ),
-//         Transform.rotate(
-//           angle: math.pi / 4,
-//           child: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: <Widget>[
-//               SizedBox(height: _DIRECTION_SPACE),
-//               Row(
-//                 mainAxisSize: MainAxisSize.min,
-//                 children: <Widget>[
-//                   Button(
-//                       enableLongPress: false,
-//                       onTap: () {
-//                         Game.of(context).rotate();
-//                       }),
-//                   SizedBox(width: _DIRECTION_SPACE),
-//                   Button(onTap: () {
-//                     Game.of(context).right();
-//                   }),
-//                 ],
-//               ),
-//               SizedBox(height: _DIRECTION_SPACE),
-//               Row(
-//                 mainAxisSize: MainAxisSize.min,
-//                 children: <Widget>[
-//                   Button(onTap: () {
-//                     Game.of(context).left();
-//                   }),
-//                   SizedBox(width: _DIRECTION_SPACE),
-//                   Button(
-//                     onTap: () {
-//                       Game.of(context).down();
-//                     },
-//                   ),
-//                 ],
-//               ),
-//               SizedBox(height: _DIRECTION_SPACE),
-//             ],
-//           ),
-//         ),
-//       ],
-//     );
-//
 }
