@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tetris/gamer/block.dart';
 import 'package:tetris/main.dart';
 import 'package:tetris/material/audios.dart';
+import 'package:tetris/screens/flutter_tetris.dart';
 
 ///the height of game pad
 const GAME_PAD_MATRIX_H = 20;

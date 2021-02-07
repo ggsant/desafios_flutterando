@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tetris/main.dart';
 import 'package:tetris/panel/controller.dart';
 import 'package:tetris/panel/screen.dart';
+import 'package:tetris/screens/home_page.dart';
 
 part 'page_land.dart';
 
