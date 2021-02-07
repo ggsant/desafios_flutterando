@@ -13,104 +13,218 @@ const double _iconSize = 16;
 class DirectionController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: <Widget>[
-        SizedBox.fromSize(size: _DIRECTION_BUTTON_SIZE * 2.8),
-        Transform.rotate(
-          angle: math.pi / 4,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Row(
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Container(
+        padding: EdgeInsets.only(top: 12, bottom: 15),
+        decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(60),
+            )),
+        height: 350,
+        width: 150,
+        child: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            SizedBox.fromSize(size: _DIRECTION_BUTTON_SIZE * 2.8),
+            Transform.rotate(
+              angle: math.pi / 4,
+              child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Transform.scale(
-                    scale: 1.5,
-                    child: Transform.rotate(
-                        angle: -math.pi / 4,
-                        child: Icon(
-                          Icons.arrow_drop_up,
-                          size: _iconSize,
-                        )),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Transform.scale(
+                        scale: 1.5,
+                        child: Transform.rotate(
+                            angle: -math.pi / 4,
+                            child: Icon(
+                              Icons.arrow_drop_up,
+                              size: _iconSize,
+                            )),
+                      ),
+                      Transform.scale(
+                        scale: 1.5,
+                        child: Transform.rotate(
+                            angle: -math.pi / 4,
+                            child: Icon(
+                              Icons.arrow_right,
+                              size: _iconSize,
+                            )),
+                      ),
+                    ],
                   ),
-                  Transform.scale(
-                    scale: 1.5,
-                    child: Transform.rotate(
-                        angle: -math.pi / 4,
-                        child: Icon(
-                          Icons.arrow_right,
-                          size: _iconSize,
-                        )),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Transform.scale(
+                        scale: 1.5,
+                        child: Transform.rotate(
+                            angle: -math.pi / 4,
+                            child: Icon(
+                              Icons.arrow_left,
+                              size: _iconSize,
+                            )),
+                      ),
+                      Transform.scale(
+                        scale: 1.5,
+                        child: Transform.rotate(
+                            angle: -math.pi / 4,
+                            child: Icon(
+                              Icons.arrow_drop_down,
+                              size: _iconSize,
+                            )),
+                      ),
+                    ],
                   ),
                 ],
               ),
-              Row(
+            ),
+            Transform.rotate(
+              angle: math.pi / 4,
+              child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Transform.scale(
-                    scale: 1.5,
-                    child: Transform.rotate(
-                        angle: -math.pi / 4,
-                        child: Icon(
-                          Icons.arrow_left,
-                          size: _iconSize,
-                        )),
-                  ),
-                  Transform.scale(
-                    scale: 1.5,
-                    child: Transform.rotate(
-                        angle: -math.pi / 4,
-                        child: Icon(
-                          Icons.arrow_drop_down,
-                          size: _iconSize,
-                        )),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        Transform.rotate(
-          angle: math.pi / 4,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              SizedBox(height: _DIRECTION_SPACE),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Button(
-                      enableLongPress: false,
-                      onTap: () {
-                        Game.of(context).rotate();
+                  SizedBox(height: _DIRECTION_SPACE),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Button(
+                          enableLongPress: false,
+                          onTap: () {
+                            Game.of(context).rotate();
+                          }),
+                      SizedBox(width: _DIRECTION_SPACE),
+                      Button(onTap: () {
+                        Game.of(context).right();
                       }),
-                  SizedBox(width: _DIRECTION_SPACE),
-                  Button(onTap: () {
-                    Game.of(context).right();
-                  }),
-                ],
-              ),
-              SizedBox(height: _DIRECTION_SPACE),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Button(onTap: () {
-                    Game.of(context).left();
-                  }),
-                  SizedBox(width: _DIRECTION_SPACE),
-                  Button(
-                    onTap: () {
-                      Game.of(context).down();
-                    },
+                    ],
                   ),
+                  SizedBox(height: _DIRECTION_SPACE),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Button(onTap: () {
+                        Game.of(context).left();
+                      }),
+                      SizedBox(width: _DIRECTION_SPACE),
+                      Button(
+                        onTap: () {
+                          Game.of(context).down();
+                        },
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: _DIRECTION_SPACE),
                 ],
               ),
-              SizedBox(height: _DIRECTION_SPACE),
-            ],
-          ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
+
+// Stack(
+//       alignment: Alignment.center,
+//       children: <Widget>[
+//         SizedBox.fromSize(size: _DIRECTION_BUTTON_SIZE * 2.8),
+//         Transform.rotate(
+//           angle: math.pi / 4,
+//           child: Column(
+//             mainAxisSize: MainAxisSize.min,
+//             children: <Widget>[
+//               Row(
+//                 mainAxisSize: MainAxisSize.min,
+//                 children: <Widget>[
+//                   Transform.scale(
+//                     scale: 1.5,
+//                     child: Transform.rotate(
+//                         angle: -math.pi / 4,
+//                         child: Icon(
+//                           Icons.arrow_drop_up,
+//                           size: _iconSize,
+//                         )),
+//                   ),
+//                   Transform.scale(
+//                     scale: 1.5,
+//                     child: Transform.rotate(
+//                         angle: -math.pi / 4,
+//                         child: Icon(
+//                           Icons.arrow_right,
+//                           size: _iconSize,
+//                         )),
+//                   ),
+//                 ],
+//               ),
+//               Row(
+//                 mainAxisSize: MainAxisSize.min,
+//                 children: <Widget>[
+//                   Transform.scale(
+//                     scale: 1.5,
+//                     child: Transform.rotate(
+//                         angle: -math.pi / 4,
+//                         child: Icon(
+//                           Icons.arrow_left,
+//                           size: _iconSize,
+//                         )),
+//                   ),
+//                   Transform.scale(
+//                     scale: 1.5,
+//                     child: Transform.rotate(
+//                         angle: -math.pi / 4,
+//                         child: Icon(
+//                           Icons.arrow_drop_down,
+//                           size: _iconSize,
+//                         )),
+//                   ),
+//                 ],
+//               ),
+//             ],
+//           ),
+//         ),
+//         Transform.rotate(
+//           angle: math.pi / 4,
+//           child: Column(
+//             mainAxisSize: MainAxisSize.min,
+//             children: <Widget>[
+//               SizedBox(height: _DIRECTION_SPACE),
+//               Row(
+//                 mainAxisSize: MainAxisSize.min,
+//                 children: <Widget>[
+//                   Button(
+//                       enableLongPress: false,
+//                       onTap: () {
+//                         Game.of(context).rotate();
+//                       }),
+//                   SizedBox(width: _DIRECTION_SPACE),
+//                   Button(onTap: () {
+//                     Game.of(context).right();
+//                   }),
+//                 ],
+//               ),
+//               SizedBox(height: _DIRECTION_SPACE),
+//               Row(
+//                 mainAxisSize: MainAxisSize.min,
+//                 children: <Widget>[
+//                   Button(onTap: () {
+//                     Game.of(context).left();
+//                   }),
+//                   SizedBox(width: _DIRECTION_SPACE),
+//                   Button(
+//                     onTap: () {
+//                       Game.of(context).down();
+//                     },
+//                   ),
+//                 ],
+//               ),
+//               SizedBox(height: _DIRECTION_SPACE),
+//             ],
+//           ),
+//         ),
+//       ],
+//     );
+//
 }

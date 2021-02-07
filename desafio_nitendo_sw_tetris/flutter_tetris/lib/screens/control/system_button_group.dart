@@ -3,8 +3,6 @@ import 'package:tetris/screens/game_play/gamer.dart';
 import 'package:tetris/widgets/button.dart';
 import 'package:tetris/widgets/description.dart';
 
-const Size _SYSTEM_BUTTON_SIZE = const Size(28, 28);
-
 class SystemButtonGroup extends StatelessWidget {
   static const _systemButtonColor = const Color(0xFF2dc421);
 
