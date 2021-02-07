@@ -20,6 +20,7 @@ class GameMaterial extends StatefulWidget {
 }
 
 class _GameMaterialState extends State<GameMaterial> {
+  ///the image data of /assets/material.png
   ui.Image material;
 
   @override

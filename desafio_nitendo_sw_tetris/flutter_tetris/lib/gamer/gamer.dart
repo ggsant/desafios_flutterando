@@ -191,6 +191,7 @@ class GameControl extends State<Game> with RouteAware {
         _mixCurrentIntoData();
       }
     }
+    setState(() {});
   }
 
   Timer _autoFallTimer;
