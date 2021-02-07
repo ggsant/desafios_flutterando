@@ -4,37 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:tetris/gamer/block.dart';
 import 'package:tetris/screens/flutter_tetris.dart';
 
-///the height of game pad
 const GAME_PAD_MATRIX_H = 20;
 
-///the width of game pad
 const GAME_PAD_MATRIX_W = 10;
 
-///state of [GameControl]
 enum GameStates {
-  ///随时可以开启一把惊险而又刺激的俄罗斯方块
   none,
-
-  ///游戏暂停中，方块的下落将会停止
   paused,
-
-  ///游戏正在进行中，方块正在下落
-  ///按键可交互
   running,
-
-  ///游戏正在重置
-  ///重置完成之后，[GameController]状态将会迁移为[none]
   reset,
-
-  ///下落方块已经到达底部，此时正在将方块固定在游戏矩阵中
-  ///固定完成之后，将会立即开始下一个方块的下落任务
   mixing,
-
-  ///正在消除行
-  ///消除完成之后，将会立刻开始下一个方块的下落任务
   clear,
-
-  ///方块快速下坠到底部
   drop,
 }
 
@@ -75,7 +55,6 @@ const _SPEED = [
 
 class GameControl extends State<Game> with RouteAware {
   GameControl() {
-    //inflate game pad data
     for (int i = 0; i < GAME_PAD_MATRIX_H; i++) {
       _data.add(List.filled(GAME_PAD_MATRIX_W, 0));
       _mask.add(List.filled(GAME_PAD_MATRIX_W, 0));
@@ -96,22 +75,13 @@ class GameControl extends State<Game> with RouteAware {
 
   @override
   void didPushNext() {
-    //pause when screen is at background
     pause();
   }
 
-  ///the gamer data
   final List<List<int>> _data = [];
 
-  ///在 [build] 方法中于 [_data]混合，形成一个新的矩阵
-  ///[_mask]矩阵的宽高与 [_data] 一致
-  ///对于任意的 _mask[x,y] ：
-  /// 如果值为 0,则对 [_data]没有任何影响
-  /// 如果值为 -1,则表示 [_data] 中该行不显示
-  /// 如果值为 1，则表示 [_data] 中该行高亮
   final List<List<int>> _mask = [];
 
-  ///from 1-6
   int _level = 1;
 
   int _points = 0;
