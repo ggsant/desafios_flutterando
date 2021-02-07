@@ -2,30 +2,30 @@ import 'gamer.dart';
 import 'dart:math' as math;
 
 const BLOCK_SHAPES = {
-  BlockType.ONE: [
+  BlockType.I: [
     [1, 1, 1, 1]
   ],
-  BlockType.TWO: [
+  BlockType.L: [
     [0, 0, 1],
     [1, 1, 1],
   ],
-  BlockType.THREE: [
+  BlockType.J: [
     [1, 0, 0],
     [1, 1, 1],
   ],
-  BlockType.FOUR: [
+  BlockType.Z: [
     [1, 1, 0],
     [0, 1, 1],
   ],
-  BlockType.FIVE: [
+  BlockType.S: [
     [0, 1, 1],
     [1, 1, 0],
   ],
-  BlockType.SIX: [
+  BlockType.O: [
     [1, 1],
     [1, 1]
   ],
-  BlockType.SEVEN: [
+  BlockType.T: [
     [0, 1, 0],
     [1, 1, 1]
   ]
@@ -33,37 +33,37 @@ const BLOCK_SHAPES = {
 
 ///方块初始化时的位置
 const START_XY = {
-  BlockType.ONE: [3, 0],
-  BlockType.TWO: [4, -1],
-  BlockType.THREE: [4, -1],
-  BlockType.FOUR: [4, -1],
-  BlockType.FIVE: [4, -1],
-  BlockType.SIX: [4, -1],
-  BlockType.SEVEN: [4, -1],
+  BlockType.I: [3, 0],
+  BlockType.L: [4, -1],
+  BlockType.J: [4, -1],
+  BlockType.Z: [4, -1],
+  BlockType.S: [4, -1],
+  BlockType.O: [4, -1],
+  BlockType.T: [4, -1],
 };
 
 ///方块变换时的中心点
 const ORIGIN = {
-  BlockType.ONE: [
+  BlockType.I: [
     [1, -1],
     [-1, 1],
   ],
-  BlockType.TWO: [
+  BlockType.L: [
     [0, 0]
   ],
-  BlockType.THREE: [
+  BlockType.J: [
     [0, 0]
   ],
-  BlockType.FOUR: [
+  BlockType.Z: [
     [0, 0]
   ],
-  BlockType.FIVE: [
+  BlockType.S: [
     [0, 0]
   ],
-  BlockType.SIX: [
+  BlockType.O: [
     [0, 0]
   ],
-  BlockType.SEVEN: [
+  BlockType.T: [
     [0, 0],
     [0, 1],
     [1, -1],
@@ -71,7 +71,7 @@ const ORIGIN = {
   ],
 };
 
-enum BlockType { ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN }
+enum BlockType { I, L, J, Z, S, O, T }
 
 class Block {
   final BlockType type;
