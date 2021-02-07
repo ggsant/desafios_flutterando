@@ -11,18 +11,16 @@ import 'status_panel.dart';
 
 const Color SCREEN_BACKGROUND = Color(0xff9ead86);
 
-/// screen H : W;
-class Screen extends StatelessWidget {
-  ///the with of screen
+class MainScreen extends StatelessWidget {
   final double width;
 
-  const Screen({Key key, @required this.width}) : super(key: key);
+  const MainScreen({Key key, @required this.width}) : super(key: key);
 
-  Screen.fromHeight(double height) : this(width: ((height - 6) / 2 + 6) / 0.6);
+  MainScreen.fromHeight(double height)
+      : this(width: ((height - 6) / 2 + 6) / 0.6);
 
   @override
   Widget build(BuildContext context) {
-    //play panel need 60%
     final playerPanelWidth = width * 0.6;
     return Shake(
       shake: GameState.of(context).states == GameStates.drop,

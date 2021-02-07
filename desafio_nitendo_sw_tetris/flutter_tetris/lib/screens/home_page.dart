@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tetris/panel/page_portrait.dart';
+import 'package:tetris/screens/page_portrait.dart';
 
 const SCREEN_BORDER_WIDTH = 3.0;
 

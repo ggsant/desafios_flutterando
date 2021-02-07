@@ -1,4 +1,4 @@
-part of 'page_portrait.dart';
+part of '../screens/page_portrait.dart';
 
 class PageLand extends StatelessWidget {
   @override
@@ -27,7 +27,7 @@ class PageLand extends StatelessWidget {
                   ],
                 ),
               ),
-              _ScreenDecoration(child: Screen.fromHeight(height * 0.8)),
+              _ScreenDecoration(child: MainScreen.fromHeight(height * 0.8)),
               Expanded(
                 child: Column(
                   children: <Widget>[

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tetris/panel/screen.dart';
+import 'package:tetris/screens/main_screen.dart';
 import 'package:tetris/screens/control/direction_control.dart';
 import 'package:tetris/screens/control/game_control.dart';
 import 'package:tetris/screens/control/system_button_group.dart';
@@ -22,7 +22,7 @@ class PagePortrait extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Spacer(),
-              _ScreenDecoration(child: Screen(width: screenW)),
+              _ScreenDecoration(child: MainScreen(width: screenW)),
               Spacer(flex: 2),
               GameController(),
             ],
