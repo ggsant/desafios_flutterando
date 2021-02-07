@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tetris/gamer/gamer.dart';
-import 'package:tetris/gamer/keyboard.dart';
 
+import 'game_play/gamer.dart';
+import 'game_play/keyboard.dart';
 import 'home_page.dart';
 
 final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();

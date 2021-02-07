@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tetris/gamer/gamer.dart';
+import 'package:tetris/screens/game_play/gamer.dart';
 import 'package:tetris/widgets/button.dart';
 import 'package:tetris/widgets/description.dart';
 
