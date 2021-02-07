@@ -1,4 +1,11 @@
-part of '../screens/page_portrait.dart';
+import 'package:flutter/material.dart';
+import 'package:tetris/screens/control/direction_control.dart';
+import 'package:tetris/screens/control/system_button_group.dart';
+import 'package:tetris/widgets/drop_button.dart';
+
+import '../home_page.dart';
+import '../main_screen.dart';
+import 'screen_decorations.dart';
 
 class PageLand extends StatelessWidget {
   @override
@@ -27,7 +34,7 @@ class PageLand extends StatelessWidget {
                   ],
                 ),
               ),
-              _ScreenDecoration(child: MainScreen.fromHeight(height * 0.8)),
+              ScreenDecoration(child: MainScreen.fromHeight(height * 0.8)),
               Expanded(
                 child: Column(
                   children: <Widget>[

@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tetris/screens/main_screen.dart';
-import 'package:tetris/screens/control/direction_control.dart';
 import 'package:tetris/screens/control/game_control.dart';
-import 'package:tetris/screens/control/system_button_group.dart';
 import 'package:tetris/screens/home_page.dart';
-import 'package:tetris/widgets/drop_button.dart';
-
-part 'page_land.dart';
 
 class PagePortrait extends StatelessWidget {
   @override
