@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tetris/gamer/gamer.dart';
-import 'package:tetris/material/briks.dart';
-import 'package:tetris/material/material.dart';
+import 'package:tetris/widgets/briks.dart';
+import 'package:tetris/game_material.dart';
 
 import '../rotate_block.dart';
 import 'player_panel.dart';
