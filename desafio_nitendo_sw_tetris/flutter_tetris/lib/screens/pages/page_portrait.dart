@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tetris/resource/colors.dart';
 import 'package:tetris/screens/main_screen.dart';
 import 'package:tetris/screens/control/game_control.dart';
 import 'package:tetris/screens/home_page.dart';
@@ -11,7 +12,7 @@ class PagePortrait extends StatelessWidget {
 
     return SizedBox.expand(
       child: Container(
-        color: BACKGROUND_COLOR,
+        color: AppColors.screen,
         child: Padding(
           padding: MediaQuery.of(context).padding,
           child: Column(
