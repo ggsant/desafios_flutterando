@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   flutter_neumorphic: ^3.0.4+1
   material_design_icons_flutter: ^4.0.5855
+  neumorphic: ^0.4.0
   overlay_support: ^0.0.4
 
 dev_dependencies:

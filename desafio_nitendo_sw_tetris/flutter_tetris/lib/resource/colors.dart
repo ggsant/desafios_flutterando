@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color bgScreenBottom = Color(0xff272B2E);
-  static const Color screen = Color(0xff000000);
-  static const Color leftSide = Color(0xff00BDDD);
-  static const Color rightSide = Color(0xffFF5F53);
+  static const Color screen = Color.fromRGBO(47, 51, 54, 1);
+  static const Color leftSide = Color.fromRGBO(0, 189, 221, 1);
+  static const Color rightSide = Color.fromRGBO(255, 95, 83, 1);
   static const Color lampOn = Color(0xffB6EBA5);
   static const Color textBanner = Color(0xff20152A);
   static const Color bigButtonLayerBorder = Color(0xff000000);

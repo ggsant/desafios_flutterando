@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tetris/resource/colors.dart';
 import 'package:tetris/screens/game_play/gamer.dart';
 
 import 'button.dart';
@@ -12,13 +13,13 @@ class LeftControl extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(top: 15),
         decoration: BoxDecoration(
-          color: Colors.lightBlue,
+          color: AppColors.leftSide,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(60),
           ),
         ),
         height: 300,
-        width: 110,
+        width: 125,
         child: Column(
           children: [
             SizedBox(height: 10),

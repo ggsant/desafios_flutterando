@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tetris/resource/colors.dart';
 import 'package:tetris/screens/game_play/gamer.dart';
 import 'dart:math' as math;
 
@@ -18,13 +19,13 @@ class DirectionControl extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(top: 12, bottom: 15),
         decoration: BoxDecoration(
-          color: Colors.red,
+          color: AppColors.rightSide,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(60),
           ),
         ),
         height: 350,
-        width: 150,
+        width: 125,
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
@@ -97,6 +98,7 @@ class DirectionControl extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       ButtonDirections(
+                        icon: Icon(Icons.arrow_back),
                         enableLongPress: false,
                         onTap: () {
                           Game.of(context).rotate();

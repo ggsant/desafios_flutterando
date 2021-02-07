@@ -232,8 +232,8 @@ class _ButtonDirectionsState extends State<ButtonDirections> {
           });
         },
         child: Container(
-          height: 50,
-          width: 50,
+          height: 40,
+          width: 40,
           alignment: Alignment.center,
           decoration: BoxDecoration(
             border: Border.all(color: _color),
@@ -248,8 +248,8 @@ class _ButtonDirectionsState extends State<ButtonDirections> {
             ),
           ),
           child: Container(
-            height: 45,
-            width: 45,
+            height: 35,
+            width: 35,
             alignment: Alignment.center,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -263,8 +263,8 @@ class _ButtonDirectionsState extends State<ButtonDirections> {
               ),
             ),
             child: Container(
-              height: 60,
-              width: 60,
+              height: 50,
+              width: 50,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 border:

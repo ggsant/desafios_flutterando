@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neumorphic/neumorphic.dart';
 import 'package:tetris/widgets/control.dart';
 import 'package:tetris/widgets/left_control.dart';
 
@@ -10,10 +11,23 @@ class GameControl extends StatelessWidget {
     return SizedBox(
       height: 300,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           LeftControl(),
-          SizedBox(width: 15),
-          miniLogo(),
+          Column(
+            children: [
+              miniLogo(),
+              Spacer(),
+              NeuText(
+                'F\nL\nU\nT\nE\nT\nR\nI\nX',
+                emboss: true,
+                parentColor: Colors.blue[300],
+                spread: 10.0,
+                style: TextStyle(fontSize: 20),
+              ),
+              Spacer(),
+            ],
+          ),
           DirectionControl(),
         ],
       ),
