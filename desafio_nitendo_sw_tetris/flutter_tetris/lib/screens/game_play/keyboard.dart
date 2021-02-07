@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 
 import 'gamer.dart';
 
-///keyboard controller to play game
 class KeyboardController extends StatefulWidget {
   final Widget child;
 

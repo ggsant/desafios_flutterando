@@ -31,7 +31,6 @@ const BLOCK_SHAPES = {
   ]
 };
 
-///方块初始化时的位置
 const START_XY = {
   BlockType.I: [3, 0],
   BlockType.L: [4, -1],
@@ -42,7 +41,6 @@ const START_XY = {
   BlockType.T: [4, -1],
 };
 
-///方块变换时的中心点
 const ORIGIN = {
   BlockType.I: [
     [1, -1],
@@ -131,8 +129,6 @@ class Block {
     return true;
   }
 
-  ///return null if do not show at [x][y]
-  ///return 1 if show at [x,y]
   int get(int x, int y) {
     x -= xy[0];
     y -= xy[1];

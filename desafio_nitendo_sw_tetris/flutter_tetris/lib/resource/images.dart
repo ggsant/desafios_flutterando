@@ -10,8 +10,6 @@ const _DIGITAL_ROW_SIZE = Size(14, 24);
 class Number extends StatelessWidget {
   final int length;
 
-  ///the number to show
-  ///could be null
   final int number;
 
   final bool padWithZero;
@@ -61,7 +59,6 @@ class _IconDragonState extends State<IconDragon> {
     _initAnimation();
   }
 
-  ///current frame of animation
   int _frame = 0;
 
   @override
@@ -166,10 +163,7 @@ class IconColon extends StatelessWidget {
   }
 }
 
-/// a single digital
 class Digital extends StatelessWidget {
-  ///number 0 - 9
-  ///or null indicate it is invalid
   final int digital;
 
   final Size size;
@@ -195,7 +189,6 @@ class Digital extends StatelessWidget {
 }
 
 class _Material extends StatelessWidget {
-  //the size off widget
   final Size size;
 
   final Size srcSize;
@@ -222,10 +215,8 @@ class _Material extends StatelessWidget {
 }
 
 class _MaterialPainter extends CustomPainter {
-  ///offset to adjust the drawing
   final Offset offset;
 
-  ///the size we pick from [_material]
   final Size size;
 
   final ui.Image material;
