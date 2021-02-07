@@ -18,7 +18,6 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   overlay_support: ^0.0.4
-  soundpool: ^1.0.1
 
 dev_dependencies:
   flutter_test:
