@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:tetris/gamer/block.dart';
-import 'package:tetris/main.dart';
-import 'package:tetris/material/audios.dart';
 import 'package:tetris/screens/flutter_tetris.dart';
 
 ///the height of game pad
@@ -132,14 +130,11 @@ class GameControl extends State<Game> with RouteAware {
     return next;
   }
 
-  SoundState get _sound => Sound.of(context);
-
   void rotate() {
     if (_states == GameStates.running && _current != null) {
       final next = _current.rotate();
       if (next.isValidInMatrix(_data)) {
         _current = next;
-        _sound.rotate();
       }
     }
     setState(() {});
@@ -152,7 +147,6 @@ class GameControl extends State<Game> with RouteAware {
       final next = _current.right();
       if (next.isValidInMatrix(_data)) {
         _current = next;
-        _sound.move();
       }
     }
     setState(() {});
@@ -165,7 +159,6 @@ class GameControl extends State<Game> with RouteAware {
       final next = _current.left();
       if (next.isValidInMatrix(_data)) {
         _current = next;
-        _sound.move();
       }
     }
     setState(() {});
@@ -180,7 +173,6 @@ class GameControl extends State<Game> with RouteAware {
           _states = GameStates.drop;
           setState(() {});
           await Future.delayed(const Duration(milliseconds: 100));
-          _mixCurrentIntoData(mixSound: _sound.fall);
           break;
         }
       }
@@ -195,9 +187,6 @@ class GameControl extends State<Game> with RouteAware {
       final next = _current.fall();
       if (next.isValidInMatrix(_data)) {
         _current = next;
-        if (enableSounds) {
-          _sound.move();
-        }
       } else {
         _mixCurrentIntoData();
       }
@@ -207,17 +196,14 @@ class GameControl extends State<Game> with RouteAware {
 
   Timer _autoFallTimer;
 
-  ///mix current into [_data]
   Future<void> _mixCurrentIntoData({void mixSound()}) async {
     if (_current == null) {
       return;
     }
-    //cancel the auto falling task
     _autoFall(false);
 
     _forTable((i, j) => _data[i][j] = _current.get(j, i) ?? _data[i][j]);
 
-    //消除行
     final clearLines = [];
     for (int i = 0; i < GAME_PAD_MATRIX_H; i++) {
       if (_data[i].every((d) => d == 1)) {
@@ -228,9 +214,6 @@ class GameControl extends State<Game> with RouteAware {
     if (clearLines.isNotEmpty) {
       setState(() => _states = GameStates.clear);
 
-      _sound.clear();
-
-      ///消除效果动画
       for (int count = 0; count < 5; count++) {
         clearLines.forEach((line) {
           _mask[line].fillRange(0, GAME_PAD_MATRIX_W, count % 2 == 0 ? -1 : 1);
@@ -241,7 +224,6 @@ class GameControl extends State<Game> with RouteAware {
       clearLines
           .forEach((line) => _mask[line].fillRange(0, GAME_PAD_MATRIX_W, 0));
 
-      //移除所有被消除的行
       clearLines.forEach((line) {
         _data.setRange(1, line + 1, _data);
         _data[0] = List.filled(GAME_PAD_MATRIX_W, 0);
@@ -251,7 +233,6 @@ class GameControl extends State<Game> with RouteAware {
       _cleared += clearLines.length;
       _points += clearLines.length * _level * 5;
 
-      //up level possible when cleared
       int level = (_cleared ~/ 50) + _LEVEL_MIN;
       _level = level <= _LEVEL_MAX && level > _level ? level : _level;
     } else {
@@ -264,22 +245,16 @@ class GameControl extends State<Game> with RouteAware {
       setState(() {});
     }
 
-    //_current已经融入_data了，所以不再需要
     _current = null;
 
-    //检查游戏是否结束,即检查第一行是否有元素为1
     if (_data[0].contains(1)) {
       reset();
       return;
     } else {
-      //游戏尚未结束，开启下一轮方块下落
       _startGame();
     }
   }
 
-  ///遍历表格
-  ///i 为 row
-  ///j 为 column
   static void _forTable(dynamic function(int row, int column)) {
     for (int i = 0; i < GAME_PAD_MATRIX_H; i++) {
       for (int j = 0; j < GAME_PAD_MATRIX_W; j++) {
@@ -321,14 +296,12 @@ class GameControl extends State<Game> with RouteAware {
 
   void reset() {
     if (_states == GameStates.none) {
-      //可以开始游戏
       _startGame();
       return;
     }
     if (_states == GameStates.reset) {
       return;
     }
-    _sound.start();
     _states = GameStates.reset;
     () async {
       int line = GAME_PAD_MATRIX_H;
@@ -385,37 +358,24 @@ class GameControl extends State<Game> with RouteAware {
       }
     }
     debugPrint("game states : $_states");
-    return GameState(
-        mixed, _states, _level, _sound.mute, _points, _cleared, _next,
+    return GameState(mixed, _states, _level, _points, _cleared, _next,
         child: widget.child);
-  }
-
-  void soundSwitch() {
-    setState(() {
-      _sound.mute = !_sound.mute;
-    });
   }
 }
 
 class GameState extends InheritedWidget {
-  GameState(this.data, this.states, this.level, this.muted, this.points,
-      this.cleared, this.next,
+  GameState(
+      this.data, this.states, this.level, this.points, this.cleared, this.next,
       {Key key, this.child})
       : super(key: key, child: child);
 
   final Widget child;
 
-  ///屏幕展示数据
-  ///0: 空砖块
-  ///1: 普通砖块
-  ///2: 高亮砖块
   final List<List<int>> data;
 
   final GameStates states;
 
   final int level;
-
-  final bool muted;
 
   final int points;
 

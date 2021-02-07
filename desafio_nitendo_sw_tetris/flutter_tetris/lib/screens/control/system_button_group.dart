@@ -14,16 +14,6 @@ class SystemButtonGroup extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Description(
-          text: 'sounds',
-          child: Button(
-              size: _SYSTEM_BUTTON_SIZE,
-              color: _systemButtonColor,
-              enableLongPress: false,
-              onTap: () {
-                Game.of(context).soundSwitch();
-              }),
-        ),
-        Description(
           text: 'pause',
           child: Button(
               size: _SYSTEM_BUTTON_SIZE,

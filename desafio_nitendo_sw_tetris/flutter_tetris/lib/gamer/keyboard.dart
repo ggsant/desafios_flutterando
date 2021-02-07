@@ -40,8 +40,6 @@ class _KeyboardControllerState extends State<KeyboardController> {
       game.drop();
     } else if (key == LogicalKeyboardKey.keyP) {
       game.pauseOrResume();
-    } else if (key == LogicalKeyboardKey.keyS) {
-      game.soundSwitch();
     } else if (key == LogicalKeyboardKey.keyR) {
       game.reset();
     }
