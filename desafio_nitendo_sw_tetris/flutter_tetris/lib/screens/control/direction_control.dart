@@ -5,12 +5,6 @@ import 'dart:math' as math;
 
 import 'package:tetris/widgets/button.dart';
 
-const Size _DIRECTION_BUTTON_SIZE = const Size(48, 48);
-
-const double _DIRECTION_SPACE = 16;
-
-const double _iconSize = 16;
-
 class DirectionControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +23,7 @@ class DirectionControl extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
-            SizedBox.fromSize(size: _DIRECTION_BUTTON_SIZE * 2.8),
+            SizedBox.fromSize(size: Size(48, 48) * 2.8),
             Transform.rotate(
               angle: math.pi / 4,
               child: Column(
@@ -44,7 +38,7 @@ class DirectionControl extends StatelessWidget {
                           angle: -math.pi / 4,
                           child: Icon(
                             Icons.arrow_drop_up,
-                            size: _iconSize,
+                            size: 16,
                           ),
                         ),
                       ),
@@ -54,7 +48,7 @@ class DirectionControl extends StatelessWidget {
                           angle: -math.pi / 4,
                           child: Icon(
                             Icons.arrow_right,
-                            size: _iconSize,
+                            size: 16,
                           ),
                         ),
                       ),
@@ -69,7 +63,7 @@ class DirectionControl extends StatelessWidget {
                           angle: -math.pi / 4,
                           child: Icon(
                             Icons.arrow_left,
-                            size: _iconSize,
+                            size: 16,
                           ),
                         ),
                       ),
@@ -79,7 +73,7 @@ class DirectionControl extends StatelessWidget {
                           angle: -math.pi / 4,
                           child: Icon(
                             Icons.arrow_drop_down,
-                            size: _iconSize,
+                            size: 16,
                           ),
                         ),
                       ),
@@ -93,7 +87,7 @@ class DirectionControl extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  SizedBox(height: _DIRECTION_SPACE),
+                  SizedBox(height: 16),
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -104,7 +98,7 @@ class DirectionControl extends StatelessWidget {
                           Game.of(context).rotate();
                         },
                       ),
-                      SizedBox(width: _DIRECTION_SPACE),
+                      SizedBox(width: 16),
                       ButtonDirections(
                         onTap: () {
                           Game.of(context).right();
@@ -112,7 +106,7 @@ class DirectionControl extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: _DIRECTION_SPACE),
+                  SizedBox(height: 16),
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -121,7 +115,7 @@ class DirectionControl extends StatelessWidget {
                           Game.of(context).left();
                         },
                       ),
-                      SizedBox(width: _DIRECTION_SPACE),
+                      SizedBox(width: 16),
                       ButtonDirections(
                         onTap: () {
                           Game.of(context).down();
@@ -129,7 +123,7 @@ class DirectionControl extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: _DIRECTION_SPACE),
+                  SizedBox(height: 16),
                 ],
               ),
             ),
