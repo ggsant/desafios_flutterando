@@ -1,16 +1,9 @@
-# flutter_nitendo
+# Design inspirado por Nintendo_swt
 
-A new Flutter project.
+Desafio proposto pela comunidade Flutterando.
+# Link de maquete
 
-## Getting Started
+https://www.figma.com/file/EVeqd5Nlgr3MNE2JyespMj/NintendoSwt-Flutterando?node-id=2%3A102
+# ScreenShoot
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20210208-141555](https://user-images.githubusercontent.com/61892998/107271840-8ad0a680-6a2b-11eb-8e9a-c0fedcdfdbe5.jpg)
