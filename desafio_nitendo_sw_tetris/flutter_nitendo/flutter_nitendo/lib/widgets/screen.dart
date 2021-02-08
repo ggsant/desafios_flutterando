@@ -3,11 +3,11 @@ import 'package:flutter_nitendo/resources/colors.dart';
 
 import 'logo.dart';
 
-class Screen extends StatelessWidget {
+class NintendoScreen extends StatelessWidget {
   final double height;
   final double width;
 
-  const Screen({Key key, this.height, this.width}) : super(key: key);
+  const NintendoScreen({Key key, this.height, this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

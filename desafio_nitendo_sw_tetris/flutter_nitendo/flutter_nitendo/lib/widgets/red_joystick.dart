@@ -29,25 +29,25 @@ class RedJoystick extends StatelessWidget {
             offset: Offset(-10.0, 20.0),
             child: Align(
               alignment: Alignment.topRight,
-              child: SelectButton(),
+              child: MinusButton(),
             ),
           ),
           Transform.translate(
             offset: Offset(39.0, 11.0),
             child: Transform.rotate(
               angle: pi * .5,
-              child: SelectButton(),
+              child: MinusButton(),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(top: 30),
-            child: LetterButton(
+            child: ControlLetterButton(
               height: height,
               width: width,
             ),
           ),
           SizedBox(height: height * .1),
-          BigButton(),
+          LargeButton(),
           Padding(
             padding: EdgeInsets.all(8.0),
             child: Align(alignment: Alignment.bottomRight, child: HomeButton()),

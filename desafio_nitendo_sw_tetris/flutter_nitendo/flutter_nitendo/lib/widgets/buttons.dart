@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_nitendo/resources/colors.dart';
+import 'package:flutter/material.dart';
 
-class BigButton extends StatelessWidget {
+class LargeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -58,15 +58,16 @@ class BigButton extends StatelessWidget {
   }
 }
 
-class ButtonDirectional extends StatelessWidget {
+class ControlDirectionalButton extends StatelessWidget {
   final double height;
   final double width;
 
-  const ButtonDirectional({Key key, this.height, this.width}) : super(key: key);
+  const ControlDirectionalButton({Key key, this.height, this.width})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height * .3,
+      height: height * 0.3,
       width: width,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -291,11 +292,12 @@ class HomeButton extends StatelessWidget {
   }
 }
 
-class LetterButton extends StatelessWidget {
+class ControlLetterButton extends StatelessWidget {
   final double height;
   final double width;
 
-  const LetterButton({Key key, this.height, this.width}) : super(key: key);
+  const ControlLetterButton({Key key, this.height, this.width})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -489,7 +491,7 @@ class LetterButton extends StatelessWidget {
   }
 }
 
-class SelectButton extends StatelessWidget {
+class MinusButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

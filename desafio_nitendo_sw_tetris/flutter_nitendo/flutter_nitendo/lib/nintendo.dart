@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_nitendo/resources/colors.dart';
-import 'package:flutter_nitendo/widgets/screen.dart';
-
+import 'package:flutter/material.dart';
+import 'widgets/screen.dart';
 import 'widgets/joystick.dart';
 
 class Nintendo extends StatefulWidget {
@@ -12,8 +11,6 @@ class Nintendo extends StatefulWidget {
 class _NintendoState extends State<Nintendo> {
   @override
   Widget build(BuildContext context) {
-    var sizes = MediaQuery.of(context).size;
-
     return Material(
       child: Container(
         height: double.infinity,
@@ -31,7 +28,7 @@ class _NintendoState extends State<Nintendo> {
         child: ListView(
           children: [
             Container(
-              child: Screen(
+              child: NintendoScreen(
                 height: 300,
                 width: 350,
               ),

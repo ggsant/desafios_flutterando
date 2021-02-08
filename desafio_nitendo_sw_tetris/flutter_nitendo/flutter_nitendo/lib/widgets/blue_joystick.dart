@@ -29,14 +29,14 @@ class BlueJoystick extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: Align(
               alignment: Alignment.topLeft,
-              child: SelectButton(),
+              child: MinusButton(),
             ),
           ),
           SizedBox(height: 20),
-          BigButton(),
+          LargeButton(),
           Padding(
             padding: EdgeInsets.only(top: 30),
-            child: ButtonDirectional(
+            child: ControlDirectionalButton(
               height: height,
               width: width,
             ),
