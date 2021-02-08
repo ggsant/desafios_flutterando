@@ -19,7 +19,7 @@ class GameControl extends StatelessWidget {
               miniLogo(),
               Spacer(),
               NeuText(
-                'F\nL\nU\nT\nE\nT\nR\nI\nX',
+                'F\nL\nU\nT\nE\nT\nR\nI\nS',
                 emboss: true,
                 parentColor: Colors.blue[300],
                 spread: 10.0,
