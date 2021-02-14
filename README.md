@@ -6,6 +6,8 @@ Repositório destinado aos desafios proposto pela comunidade Fluterando.
 
 - [x] [Nintendo_swt](https://www.figma.com/file/EVeqd5Nlgr3MNE2JyespMj/NintendoSwt-Flutterando?node-id=2%3A102)
 
+- [x] [Flutetris](https://user-images.githubusercontent.com/61892998/107865815-3ffac880-6e49-11eb-91d5-072dd56b573b.mp4)
+
 
 
 
