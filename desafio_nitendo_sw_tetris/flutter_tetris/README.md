@@ -10,4 +10,4 @@ O jogo consiste em empilhar tetraminós que descem a tela de forma que completem
 
 Pajitnov percebeu o potencial do jogo por não conseguir parar de jogar antes mesmo de terminar o programa, bem como dois colegas de trabalho que ajudaram a finalizar o jogo e todos os colegas do centro de computação, que haviam recebido cópias em disquetes gravados pelo próprio Pajitnov.Para não ser acusado de viciar os pesquisadores num passatempo eletrônico, destruiu todos os discos ao fim do expediente. Entretanto, o jogo continuou sendo distribuído, de maneira informal, até chegar a pessoas interessadas em comercializá-lo.
 
-![Alt Text](https://media.giphy.com/media/hjeomHcdMJDudur8AC/giphy.gif) 
+https://user-images.githubusercontent.com/61892998/107865815-3ffac880-6e49-11eb-91d5-072dd56b573b.mp4
