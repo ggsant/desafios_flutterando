@@ -5,6 +5,6 @@ Desafio proposto pela comunidade Flutterando.
 
 https://www.figma.com/file/EVeqd5Nlgr3MNE2JyespMj/NintendoSwt-Flutterando?node-id=2%3A102
 
-![Screenshot (40)](https://user-images.githubusercontent.com/61892998/107865881-d29b6780-6e49-11eb-9029-fedf03792699.png)
+
 
 ![Theme (1)](https://user-images.githubusercontent.com/61892998/107865818-412bf580-6e49-11eb-9341-e20b3c2833e1.png)
