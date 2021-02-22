@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'presenter/modules/pokedex_page.dart';
+import 'presenter/core/screen/animation_page.dart';
 
 class Pokedex extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class Pokedex extends StatelessWidget {
         brightness: Brightness.dark,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PokedexPage(),
+      home: AnimationPage(),
     );
   }
 }
