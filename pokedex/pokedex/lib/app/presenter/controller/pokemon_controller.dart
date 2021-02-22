@@ -6,8 +6,8 @@ import 'package:mobx/mobx.dart';
 import 'package:http/http.dart' as http;
 import 'package:pokedex/app/domain/entities/pokemon.dart';
 import 'package:pokedex/app/infra/models/pokemon_api_model.dart';
-import 'package:pokedex/app/utils/consts/consts_api.dart';
-import 'package:pokedex/app/utils/consts/consts_app.dart';
+import 'package:pokedex/app/utils/consts_pokemon_list/consts_api.dart';
+import 'package:pokedex/app/utils/consts_pokemon_list/consts_app.dart';
 part 'pokemon_controller.g.dart';
 
 class PokemonApiController = _PokemonApiControllerBase

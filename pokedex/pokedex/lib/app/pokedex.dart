@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'presenter/widgets/pokemon_list_cards.dart';
+import 'presenter/modules/pokedex_page.dart';
 
 class Pokedex extends StatelessWidget {
   @override
@@ -12,8 +12,9 @@ class Pokedex extends StatelessWidget {
         primarySwatch: Colors.red,
         fontFamily: 'Google',
         brightness: Brightness.dark,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PokemonListCards(),
+      home: PokedexPage(),
     );
   }
 }
