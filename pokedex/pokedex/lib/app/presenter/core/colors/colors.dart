@@ -60,6 +60,8 @@ class ThemeColors {
   static const Color digitalDirectionRightLayer1Top = Color(0xff686D70);
   static const Color digitalDirectionRightLayer1Bottom = Color(0xff050F11);
   static const Color digitalDirectionRightLayer2Bottom = Color(0xff182022);
+
+  // Region Action Buttons
   static const Color actionButtonUpTop = Color(0xff53595C);
   static const Color actionButtonUpBottom = Color(0xff363D40);
   static const Color actionButtonLeftTop = Color(0xff535A5C);
@@ -70,4 +72,6 @@ class ThemeColors {
   static const Color actionButtonRightBottom = Color(0xff172022);
   static const Color actionButtonMiddleTop = Color(0xff353C3F);
   static const Color actionButtonMiddleBottom = Color(0xff172022);
+  static const Color actionButtonCircleTop = Color(0xff444B4E);
+  static const Color actionButtonCircleBottom = Color(0xff272F31);
 }

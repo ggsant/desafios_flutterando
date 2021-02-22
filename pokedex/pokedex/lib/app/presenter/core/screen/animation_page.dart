@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/app/presenter/core/colors/colors.dart';
 import 'package:pokedex/app/presenter/core/components/component.dart';
-import 'package:pokedex/app/presenter/modules/pokedex_page.dart';
+import 'package:pokedex/app/presenter/modules/home_page/pokedex_page.dart';
 
 class AnimationPage extends StatefulWidget {
   @override

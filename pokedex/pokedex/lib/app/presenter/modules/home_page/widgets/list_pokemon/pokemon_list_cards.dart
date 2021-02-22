@@ -3,8 +3,9 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pokedex/app/domain/entities/pokemon.dart';
-import 'package:pokedex/app/presenter/widgets/pokemon_item.dart';
 import 'package:pokedex/app/presenter/controller/pokemon_controller.dart';
+
+import 'pokemon_item.dart';
 
 class PokemonListCards extends StatefulWidget {
   @override

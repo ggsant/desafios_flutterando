@@ -11,7 +11,7 @@ class Pokedex extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
         fontFamily: 'Google',
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: AnimationPage(),
