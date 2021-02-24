@@ -9,7 +9,6 @@ class Pokedex extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Pokedex - Desafio Flutterando',
       theme: ThemeData(
-        primarySwatch: Colors.red,
         fontFamily: 'Google',
         brightness: Brightness.light,
         visualDensity: VisualDensity.adaptivePlatformDensity,

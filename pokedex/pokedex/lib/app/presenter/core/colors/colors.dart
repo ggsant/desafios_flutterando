@@ -3,6 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class ThemeColors {
+  static const Color redScreen = Color.fromRGBO(196, 29, 32, 1);
+  static const Color redScreen1 = Color(0xffBC1F21);
+  static const Color redScreen2 = Color.fromRGBO(102, 1, 2, 0.8);
+
   static const Color black = const Color(0xff000000);
   static const Color white = const Color(0xffFFFFFF);
   static const Color background = const Color(0xff1B2634);
