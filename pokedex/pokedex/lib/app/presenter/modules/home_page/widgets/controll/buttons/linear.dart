@@ -1,3 +1,4 @@
+import 'package:pokedex/app/presenter/core/colors/colors.dart';
 import 'package:flutter/material.dart';
 
 class LinearButton extends StatelessWidget {
@@ -18,6 +19,27 @@ class LinearButton extends StatelessWidget {
           width: 1,
           color: borderColor,
         ),
+      ),
+    );
+  }
+}
+
+class LinearButtons extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        children: [
+          LinearButton(
+            color: ThemeColors.pokeballRedTop,
+            borderColor: ThemeColors.pokeballRedTop,
+          ),
+          SizedBox(width: 30),
+          LinearButton(
+            color: ThemeColors.lampOuter,
+            borderColor: ThemeColors.lampOuter,
+          ),
+        ],
       ),
     );
   }

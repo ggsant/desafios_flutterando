@@ -15,6 +15,7 @@ class ThemeColors {
   static const Color pokeballWhiteTop = const Color(0xffFFFFFF);
   static const Color pokeballWhiteBottom = const Color(0xffA19E9E);
   static const Color screen = const Color(0xff1E1E1E);
+  static const Color screnFrameInternal = Color(0xff777474);
   static const Color screenFrame = const Color(0xffDAE8EB);
   static const Color screenFrameBorder = const Color(0xffE51D20);
   static const Color screenButton = const Color(0xffE51D20);

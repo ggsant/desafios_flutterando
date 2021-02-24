@@ -9,6 +9,12 @@ class BaseLayout extends StatelessWidget {
       child: Stack(
         children: [
           ClipPath(
+            clipper: ClipHomeVertical(),
+            child: Container(
+              color: ThemeColors.pokeballRedTop,
+            ),
+          ),
+          ClipPath(
             clipper: ClipHomeBottom(),
             child: Container(
               color: ThemeColors.redScreen2,
@@ -20,12 +26,6 @@ class BaseLayout extends StatelessWidget {
               color: ThemeColors.pokeballRedTop,
             ),
           ),
-          // ClipPath(
-          //   clipper: ClipHomeVertical(),
-          //   child: Container(
-          //     color: ThemeColors.black,
-          //   ),
-          // ),
         ],
       ),
     );

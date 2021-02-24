@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'cheek_pikachu.dart';
-import 'ears_pikachu.dart';
 import 'eyes_pikachu.dart';
 import 'snout_pikachu.dart';
 

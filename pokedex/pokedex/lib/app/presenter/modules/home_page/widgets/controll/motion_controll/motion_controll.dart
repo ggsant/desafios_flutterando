@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/motion_controll_buttons.dart';
-import 'widgets/motion_controll_buttons.dart';
 
 class MotionControll extends StatelessWidget {
   @override

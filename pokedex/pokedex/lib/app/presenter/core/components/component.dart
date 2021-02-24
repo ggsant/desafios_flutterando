@@ -123,26 +123,10 @@ class BorderBottomSide extends CustomClipper<Path> {
       width: size.width,
     );
 
-    var arcRect = Rect.fromLTRB(
-      size.width * .405,
-      size.height * .26,
-      size.width * .60,
-      size.height,
-    );
-
     var path = Path()
-          ..addRect(rectBorderTopSide)
-          ..addOval(addClipCircle)
-          // ..fillType = PathFillType.evenOdd
-          ..addOval(subtractClipCircle)
-        // ..moveTo(0, 0)
-        // ..lineTo(size.width * 0, size.height * .26)
-        // ..lineTo(size.width * .3, size.height * .26)
-        // ..arcTo(arcRect, 10
-        // , 0, false)
-        // ..lineTo(size.width, size.height * .26)
-        //
-        ;
+      ..addRect(rectBorderTopSide)
+      ..addOval(addClipCircle)
+      ..addOval(subtractClipCircle);
 
     path.close();
     return path;

@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/app/presenter/core/colors/colors.dart';
 
-class CircleLed extends StatefulWidget {
+class SmallLed extends StatelessWidget {
   final Color colorOne;
   final Color colorTwo;
+  final Color colorBorder;
 
-  const CircleLed({Key key, this.colorOne, this.colorTwo}) : super(key: key);
+  const SmallLed({Key key, this.colorOne, this.colorTwo, this.colorBorder})
+      : super(key: key);
 
-  @override
-  _CircleLedState createState() => _CircleLedState();
-}
-
-class _CircleLedState extends State<CircleLed> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,13 +16,42 @@ class _CircleLedState extends State<CircleLed> {
       height: 12,
       decoration: BoxDecoration(
         border: Border.all(
-          color: Colors.black26,
+          color: colorBorder,
           width: 1,
         ),
         borderRadius: BorderRadius.circular(12),
         gradient: RadialGradient(
-          colors: [Colors.white, widget.colorOne, widget.colorTwo],
+          colors: [Colors.white, colorOne, colorTwo],
         ),
+      ),
+    );
+  }
+}
+
+class TripleLed extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        children: [
+          SmallLed(
+            colorOne: ThemeColors.redLedInner,
+            colorTwo: ThemeColors.redLedOuter,
+            colorBorder: ThemeColors.redLedBorder,
+          ),
+          SizedBox(width: 10),
+          SmallLed(
+            colorOne: ThemeColors.yellowLedInner,
+            colorTwo: ThemeColors.yellowLedOuter,
+            colorBorder: ThemeColors.yellowLedBorder,
+          ),
+          SizedBox(width: 10),
+          SmallLed(
+            colorOne: ThemeColors.greenLedInner,
+            colorTwo: ThemeColors.greenLedOuter,
+            colorBorder: ThemeColors.greenLedBorder,
+          ),
+        ],
       ),
     );
   }
