@@ -26,16 +26,14 @@ class PokemonItem extends StatelessWidget {
                   nome.trim(),
                   style: TextStyle(
                     fontFamily: 'Google',
-                    fontSize: 12,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                 ),
               ),
             ),
-            SizedBox(
-              height: 5,
-            )
+            SizedBox(height: 10)
           ],
         ),
       );
@@ -57,42 +55,47 @@ class PokemonItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(left: 5.0),
       child: Container(
-        width: 200,
+        width: 260,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(
+            top: 10.0,
+            bottom: 2.0,
+            right: .5,
+            left: 10.0,
+          ),
           child: Stack(
             children: <Widget>[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(left: 8.0, top: 8.0),
+                    padding: const EdgeInsets.only(left: 8.0, top: 2.0),
                     child: Text(
                       name,
                       style: TextStyle(
                         fontFamily: 'Google',
-                        fontSize: 16,
+                        fontSize: 25,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
                     child: setTipos(),
                   ),
                 ],
               ),
               Align(
-                alignment: Alignment.topRight,
+                alignment: Alignment.bottomRight,
                 child: Hero(
                   tag: name,
                   child: CachedNetworkImage(
                     alignment: Alignment.bottomRight,
-                    height: 90,
-                    width: 90,
+                    height: 130,
+                    width: 130,
                     placeholder: (context, url) => new Container(
                       color: Colors.transparent,
                     ),

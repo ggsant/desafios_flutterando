@@ -7,15 +7,15 @@ class PokemonApiModel extends PokemonApi {
 
   PokemonApiModel.fromJson(Map<String, dynamic> json) {
     if (json['pokemon'] != null) {
-      pokemon = new List<PokemonModel>();
+      pokemon = List<PokemonModel>();
       json['pokemon'].forEach((value) {
-        pokemon.add(new PokemonModel.fromJson(value));
+        pokemon.add(PokemonModel.fromJson(value));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     if (this.pokemon != null) {
       data['pokemon'] = this.pokemon.map((value) => value.toJson()).toList();
     }

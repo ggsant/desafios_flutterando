@@ -8,7 +8,8 @@ class Snout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50,
+      width: 100,
+      height: 100,
       child: Stack(
         children: [
           Positioned(
@@ -27,7 +28,7 @@ class Snout extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(2),
               child: CircleAvatar(
-                radius: 1,
+                radius: 2,
                 backgroundColor: Colors.black,
               ),
             ),

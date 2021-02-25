@@ -3,6 +3,7 @@ import 'package:pokedex/app/presenter/core/colors/colors.dart';
 import 'dart:math' as math;
 
 import 'package:pokedex/app/presenter/modules/home_page/widgets/controll/buttons/square.dart';
+import 'package:pokedex/app/presenter/modules/home_page/widgets/list_pokemon/pokemon_list_cards.dart';
 
 class Display extends StatelessWidget {
   @override
@@ -25,6 +26,7 @@ class Display extends StatelessWidget {
                     width: 260,
                     height: 190,
                     color: ThemeColors.screnFrameInternal,
+                    child: PokemonListCards(),
                   ),
                 ),
                 Padding(

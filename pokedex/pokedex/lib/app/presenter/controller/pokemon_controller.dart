@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:http/http.dart' as http;
 import 'package:pokedex/app/domain/entities/pokemon.dart';
+import 'package:pokedex/app/domain/errors/errors.dart';
 import 'package:pokedex/app/infra/models/pokemon_api_model.dart';
 import 'package:pokedex/app/utils/consts_pokemon_list/consts_api.dart';
 import 'package:pokedex/app/utils/consts_pokemon_list/consts_app.dart';
@@ -67,8 +68,8 @@ abstract class _PokemonApiControllerBase with Store {
       final response = await http.get(ConstsAPI.pokeapiURL);
       var decodeJson = jsonDecode(response.body);
       return PokemonApiModel.fromJson(decodeJson);
-    } catch (error, stacktrace) {
-      print("Erro ao carregar lista" + stacktrace.toString());
+    } catch (error) {
+      DatasourceError(message: error);
       return null;
     }
   }

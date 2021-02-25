@@ -26,9 +26,8 @@ class _PokemonListCardsState extends State<PokemonListCards> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Stack(
+    return Container(
+      child: Stack(
         overflow: Overflow.visible,
         children: <Widget>[
           Container(
@@ -36,26 +35,26 @@ class _PokemonListCardsState extends State<PokemonListCards> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  height: 170,
+                  height: 190,
                   child: Observer(
                     name: 'ListaHomePage',
                     builder: (BuildContext context) {
+                      final _pokemon = _controller.pokemonApi.pokemon;
                       return (_controller.pokemonApi != null)
                           ? AnimationLimiter(
                               child: ListView.builder(
+                                shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
                                 physics: BouncingScrollPhysics(),
-                                padding: EdgeInsets.all(12),
                                 addAutomaticKeepAlives: true,
-                                itemCount:
-                                    _controller.pokemonApi.pokemon.length,
+                                itemCount: _pokemon.length,
                                 itemBuilder: (context, index) {
                                   Pokemon pokemon =
                                       _controller.getPokemon(index: index);
                                   return AnimationConfiguration.staggeredGrid(
                                     position: index,
                                     duration: const Duration(milliseconds: 375),
-                                    columnCount: 2,
+                                    columnCount: 1,
                                     child: ScaleAnimation(
                                       child: PokemonItem(
                                         types: pokemon.type,
