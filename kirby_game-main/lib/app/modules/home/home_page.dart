@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:kirby/app/core/components/characters/kirby/kirby.dart';
 
-import '../../core/components/characters/mario/mario.dart';
 import '../../core/constants/colors.dart';
 import 'home_controller.dart';
 import 'pages/scenario_page.dart';
@@ -25,28 +24,19 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         focusNode: FocusNode(),
         onKey: (event) async {
           if (event.runtimeType.toString() == 'RawKeyDownEvent') {
-            if (event.isKeyPressed(LogicalKeyboardKey.keyS)) {
-              debugPrint('moveDown');
-              controller.moveDown();
-              setState(() {});
-            }
-            if (event.isKeyPressed(LogicalKeyboardKey.keyW)) {
-              debugPrint('moveUP');
-              controller.moveUp();
-              setState(() {});
-            }
-            if (event.isKeyPressed(LogicalKeyboardKey.keyA)) {
+            if (event.isKeyPressed(LogicalKeyboardKey.arrowLeft)) {
               debugPrint('moveLeft');
               controller.moveLeft();
               setState(() {});
-            }
-            if (event.isKeyPressed(LogicalKeyboardKey.keyD)) {
+            } else if (event.isKeyPressed(LogicalKeyboardKey.arrowRight)) {
               debugPrint('moveRight');
               controller.moveRight();
               setState(() {});
-            }
-            if (event.isKeyPressed(LogicalKeyboardKey.arrowUp)) {
+            } else if (event.isKeyPressed(LogicalKeyboardKey.arrowUp)) {
               debugPrint('jump');
+              controller.jump();
+
+              setState(() {});
             }
           }
         },
@@ -63,20 +53,15 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             child: Stack(
               alignment: Alignment.bottomLeft,
               children: [
-                //--------------------------Lattices---------------------------
                 ScearioPage(),
-                //--------------------------Characters-------------------------
-                // Kirby(),
-
-                Mario(
-                  marioDx: controller.marioDx,
-                  marioDy: controller.marioDy,
+                Kirby(
                   direction: controller.direction,
-                  variant: controller.variant,
-                  isTop: controller.isTop,
                   isOver: controller.isOver,
+                  isTop: controller.isTop,
+                  kirbyDx: controller.kirbyDx,
+                  kirbyDy: controller.kirbyDy,
+                  variant: controller.variant,
                 ),
-                Kirby(),
               ],
             ),
           ),

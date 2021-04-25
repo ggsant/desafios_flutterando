@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import ' ground_piece_widget.dart';
+import 'ground_piece_widget.dart';
 
 class GroundMounted extends StatelessWidget {
   final int numberOfPieces;

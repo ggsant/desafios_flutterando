@@ -31,6 +31,8 @@ flutter:
     - assets/sprites/kirby/walk/
     - assets/sprites/stairs/
     - assets/sprites/walk/
+    - assets/pedra.png
+    - assets/porta.png
 
  
 
