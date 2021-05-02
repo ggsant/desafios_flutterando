@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
-import 'package:flutterando_class/app/modules/home/widgets/appbar.dart';
-import 'package:flutterando_class/app/modules/home/widgets/card_continue.dart';
+import 'package:flutterando_class/app/modules/home/widgets/appbar/appbar.dart';
+import 'package:flutterando_class/app/modules/home/widgets/cards/card_continue.dart';
 
 import '../../core/constants/colors.dart';
 import 'home_store.dart';
