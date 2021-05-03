@@ -20,6 +20,7 @@ dependencies:
   flutter_modular: ^3.1.1+1
   flutter_triple: ^1.0.5+1
   flutter_svg: ^0.22.0
+  carousel_slider: ^4.0.0-nullsafety.0
 
 dev_dependencies:
   flutter_modular_test: ^1.0.1

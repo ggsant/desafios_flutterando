@@ -18,4 +18,6 @@ class AppColors {
   static const Color progressBarDone = accent;
   static const Color selectedTabBar = Color(0xff64666B);
   static const Color unselectedTabBar = cardBackground;
+  static const Color transparent = Colors.transparent;
+  static const Color backGradient = Colors.black54;
 }

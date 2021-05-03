@@ -9,12 +9,14 @@ class FlutterandoTheme {
         fontFamily: FONT_FAMILY,
         fontSize: 22,
         fontWeight: FontWeight.w700,
+        color: Colors.white,
       ),
       //autor
       headline1: TextStyle(
         fontFamily: FONT_FAMILY,
         fontSize: 10,
         fontWeight: FontWeight.w500,
+        color: Colors.white,
       ),
       //action button card
       headline2: TextStyle(
@@ -48,26 +50,6 @@ class FlutterandoTheme {
         fontWeight: FontWeight.w500,
       ),
       //AppBarName
-
-      // //body 2
-      // bodyText2: GoogleFonts.raleway(
-      //   color: Color(0xFF969696),
-      //   letterSpacing: -0.04,
-      //   fontSize: 12,
-      //   fontWeight: FontWeight.bold,
-      // ),
-      // subtitle1: ,
-      // //Footnote 1
-      // subtitle2: GoogleFonts.raleway(
-      //   color: Colors.white,
-      //   letterSpacing: 0,
-      //   fontSize: 16,
-      //   fontWeight: FontWeight.normal,
-      // ),
-      //Titulo
-      // caption: ,
-      //buttonLabel
-      // button: ,
     );
   }
 }
